@@ -1,4 +1,5 @@
 <?php
+# https://phpsandbox.io/n/performance-strrpos-vs-strpos-substr-compare-vs-posvs-preg-match-op6yr
 #error_reporting (0);
 
 $string = '2021-02-11 14:28:34';
