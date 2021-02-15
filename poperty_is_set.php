@@ -1,4 +1,6 @@
 <?php
+# https://phpsandbox.io/n/performancetest-isset-vs-vs-ignoringerror-a6gaa
+
 error_reporting (0);
 class perf {
     private $times = [];
