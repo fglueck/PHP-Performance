@@ -4,3 +4,5 @@ PHP Performance Measuring
 This Project is for some PHP Peformance measuring tests in different scopes.
 
 https://phpsandbox.io/n/performance-strrpos-vs-strpos-substr-compare-vs-posvs-preg-match-op6yr
+
+https://phpsandbox.io/n/performancetest-isset-vs-vs-ignoringerror-a6gaa
