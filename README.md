@@ -27,6 +27,7 @@ PHP 8.0:
 ```
 
 https://phpsandbox.io/n/differenceand-performance-between-str-replace-vs-strtr-mmrck
+PHP 8.0:
 ```
 str_replace:
 ZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZ
