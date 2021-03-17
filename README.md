@@ -24,3 +24,19 @@ PHP 8.0:
 112.4% 0.02969s ??
 944.9% 0.24970s No Check
 ```
+
+https://phpsandbox.io/n/differenceand-performance-between-str-replace-vs-strtr-mmrck
+```
+str_replace:
+ZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZ
+strtr:
+ZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyza
+100.0% 0.02024s strtr()
+179.4% 0.03631s str_replace()
+str_replace:
+ZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaa
+strtr:
+ZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyza
+100.0% 0.02041s strtr()
+138.8% 0.02833s str_replace()
+```
