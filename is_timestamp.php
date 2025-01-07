@@ -8,6 +8,10 @@ $string = '2021-02-11 14:28:34';
 $len = strlen($string);
 $times = 10000000;
 
+/**
+Author Frank Glück
+https://github.com/fglueck/PHP-Performance
+*/
 class perf {
     private $times = [];
     private $start = null;
