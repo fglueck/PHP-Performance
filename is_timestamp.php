@@ -1,3 +1,4 @@
+<?php
 # https://phpsandbox.io/n/performance-strrpos-vs-strpos-substr-compare-vs-posvs-preg-match-op6yr
 #error_reporting (0);
 
@@ -45,28 +46,28 @@ class perf {
 $p = new perf(1000000);
 
 $p->test('strrpos()', function () use ($string) {
-    if(strrpos($string, ':'));
+    if(strrpos($string, ':') !== false);
 });
 
 $p->test('strrpos(+pos)', function () use ($string) {
-    if(strrpos($string, ':', -4));
+    if(strrpos($string, ':', -4) !== false);
 });
 
 $p->test('strpos()', function () use ($string) {
-    if(strpos($string, ':'));
+    if(strpos($string, ':') !== false);
 });
 
 $p->test('strpos(+pos)', function () use ($string) {
-    if(strpos($string, ':', 12));
+    if(strpos($string, ':', 12) !== false);
 });
 
 $p->test('substr_compare()', function () use ($string) {
-    if(substr_compare($string, ':', -3,1)===1);
+    if(substr_compare($string, ':', -3,1)===0);
 });
 
 $len = strlen($string);
 $p->test("[x]===':'", function () use ($string, $len) {
-    if($len-3>0 and $string[$len-3]===':');
+    if($len-3>=0 and $string[$len-3]===':');
 });
 
 $p->test('preg_match', function () use ($string) {
