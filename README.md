@@ -1,44 +1,44 @@
 # PHP-Performance
+
 PHP Performance Measuring
 
-This Project is for some PHP Peformance measuring tests in different scopes.
-100 % is the best.
-If you have some intresting Perfomance measurings, please extend this project :-)
+This project contains several PHP performance measuring tests in different scopes.
+100.0% represents the best performance.
 
-https://phpsandbox.io/n/performance-strrpos-vs-strpos-substr-compare-vs-posvs-preg-match-op6yr
+## Prerequisites
 
-PHP 8.0:
-```
-100.0% 0.36413s strrpos()
-110.9% 0.40368s strrpos(+pos)
-116.3% 0.42361s [x]===':'
-121.9% 0.44401s strpos()
-144.6% 0.52642s substr_compare()
-155.4% 0.56575s strpos(+pos)
-256.2% 0.93287s preg_match
-```
-https://phpsandbox.io/n/performancetest-isset-vs-vs-ignoringerror-a6gaa
+- PHP >= 7.0
+- `bcmath` extension (used for precision in performance reporting)
 
-PHP 8.0:
-```
-100.0% 0.02643s isset()
-112.4% 0.02969s ??
-944.9% 0.24970s No Check
+## Available Benchmarks
+
+### 1. Timestamp Detection (`is_timestamp.php`)
+Compares different ways to find a colon in a string (simulating part of a timestamp validation).
+- `strrpos()`
+- `strpos()`
+- `substr_compare()`
+- Direct index access `[x]===':'`
+- `preg_match`
+
+### 2. Property/Array Access Checks (`property_is_set.php`)
+Compares different ways to check if an array key is set.
+- `isset()`
+- Null coalescing operator `??`
+- No check (ignoring errors)
+
+### 3. String Replacement (`str_replace_vs_strtr.php`)
+Compares performance and behavior differences between `str_replace()` and `strtr()`.
+
+## How to Run
+
+You can run any benchmark directly using the PHP CLI:
+
+```bash
+php is_timestamp.php
+php property_is_set.php
+php str_replace_vs_strtr.php
 ```
 
-https://phpsandbox.io/n/differenceand-performance-between-str-replace-vs-strtr-mmrck
-PHP 8.0:
-```
-str_replace:
-ZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZZbcZZZ
-strtr:
-ZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyza
-100.0% 0.02024s strtr()
-179.4% 0.03631s str_replace()
-str_replace:
-ZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaaZbcaaa
-strtr:
-ZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyzaZbcyza
-100.0% 0.02041s strtr()
-138.8% 0.02833s str_replace()
-```
+## Contributing
+
+If you have interesting performance measurements, please feel free to extend this project!

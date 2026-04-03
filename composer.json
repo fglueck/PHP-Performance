@@ -2,6 +2,6 @@
     "name": "fglueck/perf",
     "description": "Performance measuring PHP Class",
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.0"
     }
 }
